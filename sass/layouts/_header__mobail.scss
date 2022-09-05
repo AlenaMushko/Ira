@@ -1,69 +1,167 @@
-/*--------------------header__mobile*/
+/*-------------header__mobile*/
+.header {
+  background-color: $background-color-pink-lite;
+  width: 100vw;
+  border-bottom: 1px solid #ed8dbb;
+}
+
+.mobile {
+  padding: 8px 0;
+  display: flex;
+  gap: 4px;
+  justify-content: space-between;
+}
+
+.address__item,
+.address__link,
+.main__link {
+  @include font(12px, 1.14, 400, 0.02em);
+  color: rgba(23, 26, 36, 0.8);
+}
+
+.address__link {
+  content: '';
+  fill: $background-color-pink-darc;
+}
+
+.address__item {
+  margin-top: 8px;
+  padding: 8px;
+  max-width: 150px;
+  border: 1px solid gray;
+  border-radius: 7px;
+}
+
+.main__item:first-child {
+  margin-bottom: 8px;
+}
+
 .header__button-menu {
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
-.header__mobile {
-  
-    @media screen and (max-width: 767px) {
-
-
-        position: fixed;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        padding: 21px 25px 48px 40px;
-
-
-        background: #ffffff;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
-            0px 1px 3px rgba(0, 0, 0, 0.16);
-
-
-        >.container-mobile {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between
-        }
-
-    }
-
-    .header__mobile--top .header__button-menu {
-
-        display: block;
-        margin-left: auto;
-    }
-
-
-    .header__mobile--top {
-        top: 0;
-    }
-
-    .header__mobile--bottom {
-        bottom: 0;
-    }
-
-    @media screen and (min-width: 768px) {
-        display: flex;
-
-        justify-content: space-between;
-    }
-
-    @media screen and(min-width:768px) {
-        display: none;
-    }
+.main__list .header__button-menu {
+  transform: translateX(100%);
 }
+
+.menu.is-hidden {
+  display: none;
+}
+
+.menu {
+  @media screen and (max-width: 767px) {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 21px 25px 48px 40px;
+
+    background: $background-color-grey-lite;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+
+    > .container-mobile {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+   .work-time .menu--bottom {
+
+       display: block;
+       margin-left: auto;
+   }
+
+
+   .work-time {
+       top: 0;
+   }
+
+   .menu--bottom{
+       bottom: 0;
+   }
+
+   @media screen and (min-width: 768px) {
+       display: flex;
+
+       justify-content: space-between;
+   }
+
+   @media screen and(min-width:768px) {
+       display: none;
+   }
+}
+
+.menu .header__button-menu {
+  position: absolute;
+  top: 22px;
+  right: 26px;
+}
+
+.work-time {
+  content: '';
+  display: block;
+  padding: 12px;
+  max-width: 230px;
+  max-height: 168px;
+  box-shadow: 0 15px 10px #29292b;
+
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.work-time::after {
+  transform: rotate(-3deg);
+  right: 10px;
+  left: auto;
+}
+
+
+.work-time__title {
+  @include font(16px, 1.18, 500, $spacing: 0.03em);
+  text-align: center;
+  color: $primery-color;
+  margin-bottom: 8px;
+}
+
+.work-time__text {
+  margin-top: 8px;
+  color: #656577;
+  @include font(12px, 1.71, 400, $spacing: 0.03em);
+}
+
+.work-time__text:last-child {
+  text-align: center;
+}
+
+.menu__list {
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+}
+
+.menu__link {
+  @include font(28px, 1.18, 500, 0.02em);
+  text-align: center;
+  color: rgba(01, 01, 11, 0.7);
+}
+
+
+
+/*
 
 
 
@@ -126,7 +224,7 @@
     height: 22px;
     border: 1px solid rgba(33, 33, 33, 0.2);
 
-}
+}*/
 
 /* --------смужка через бордер
   .mobile__sos .mobile__sos--blue:not(:last-child) {
