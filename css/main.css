@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -55,6 +54,14 @@ a {
 
 .list-img {
   text-decoration: none;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #010111;
 }
 
 .container {
@@ -166,178 +173,35 @@ a {
   fill: #ffffff;
 }
 
-/*---------------------------header*/
-.header {
-  font-size: 14px;
-  line-height: 1.14;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  border-bottom: 1px solid #ececec;
-}
-
-/*
-.header__container {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-justify-content: space-between;
-
-}*/
-.header__tablet {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .header__tablet {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-top: 21px;
-    padding-bottom: 21px;
-    width: 100%;
-    margin-left: 88px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .header__tablet {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    margin-left: 93px;
-  }
-}
-
-.header__tablet .site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 50px;
-}
-@media screen and (min-width: 1200px) {
-  .header__tablet .site-nav {
-    gap: 53px;
-  }
-}
-
-.header__tablet .site-nav__link--current,
-.header__tablet .site-nav__link {
-  font-size: 14px;
-  line-height: 1.14;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: #010111;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.header__tablet .site-nav__link--current:hover, .header__tablet .site-nav__link--current:focus,
-.header__tablet .site-nav__link:hover,
-.header__tablet .site-nav__link:focus {
-  color: #2196f3;
-}
-
-.header__tablet .site-nav__item {
-  position: relative;
-}
-
-.header__tablet .site-nav__link--current::after {
-  position: absolute;
-  left: 0;
-  bottom: -33px;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: #2196f3;
-  border-radius: 2px;
-}
-
-.header__tablet .site-nav__link--current {
-  color: #2196f3;
-}
-
-.header__tablet .auth-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  margin-left: auto;
-  gap: 10px;
-}
-@media screen and (min-width: 1200px) {
-  .header__tablet .auth-nav {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    gap: 30px;
-  }
-}
-
-.header__tablet .auth-nav__link {
-  color: #757575;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: transparent;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.header__tablet .auth-nav__link:hover, .header__tablet .auth-nav__link:focus {
-  fill: currentColor;
-  color: #2196f3;
-}
-
-.header__tablet .auth-nav__icon {
-  margin-right: 8px;
-  fill: currentColor;
-}
-@media screen and (min-width: 1200px) {
-  .header__tablet .auth-nav__icon {
-    gap: 10px;
-  }
-}
-
-.header__tablet .auth-nav__item {
-  font-size: 12px;
-  line-height: 1.17;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: #757575;
-}
-@media screen and (min-width: 1200px) {
-  .header__tablet .auth-nav__item {
-    font-size: 14px;
-    line-height: 1.14;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-  }
-}
-
 /*-------------header__mobile*/
 .header {
   background-color: #FBD3E6;
   width: 100vw;
   border-bottom: 1px solid #ed8dbb;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    border-bottom: none;
+    background-color: white;
+    width: 100vw;
+  }
+}
 
 .mobile {
-  padding: 8px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 8px 0;
+    display: flex;
+    gap: 4px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .address__item,
@@ -349,10 +213,30 @@ justify-content: space-between;
   letter-spacing: 0.02em;
   color: rgba(23, 26, 36, 0.8);
 }
+@media screen and (min-width: 768px) {
+  .address__item,
+.address__link,
+.main__link {
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+}
+
+.address__item {
+  font-size: 18px;
+  text-align: center;
+}
 
 .address__link {
   content: "";
   fill: #ED8DBB;
+}
+
+.address__link:hover,
+.address__link:focus {
+  color: #ED8DBB;
 }
 
 .address__item {
@@ -422,9 +306,6 @@ justify-content: space-between;
   display: block;
   margin-left: auto;
 }
-.menu .work-time {
-  top: 0;
-}
 .menu .menu--bottom {
   bottom: 0;
 }
@@ -454,13 +335,31 @@ justify-content: space-between;
   content: "";
   display: block;
   padding: 12px;
-  max-width: 230px;
-  max-height: 168px;
+  max-width: 400px;
+  max-height: 600px;
   -webkit-box-shadow: 0 15px 10px #29292b;
           box-shadow: 0 15px 10px #29292b;
   border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .work-time {
+    padding: 6px;
+    max-width: 300px;
+    max-height: 85px;
+    margin: 0;
+    margin-left: 8px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .work-time {
+    padding: 6px;
+    max-width: 300px;
+    max-height: 85px;
+    margin: 0;
+    margin-left: 70px;
+  }
 }
 
 .work-time::after {
@@ -471,22 +370,39 @@ justify-content: space-between;
 }
 
 .work-time__title {
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1.18;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.03em;
   text-align: center;
   color: #010111;
   margin-bottom: 8px;
 }
+@media screen and (min-width: 768px) {
+  .work-time__title {
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 4px;
+  }
+}
 
 .work-time__text {
   margin-top: 8px;
   color: #656577;
-  font-size: 12px;
+  font-size: 24px;
   line-height: 1.71;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 768px) {
+  .work-time__text {
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
 }
 
 .work-time__text:last-child {
@@ -497,7 +413,7 @@ justify-content: space-between;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 18px;
+  gap: 40px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -505,81 +421,421 @@ justify-content: space-between;
 }
 
 .menu__link {
-  font-size: 28px;
+  font-size: 40px;
+  line-height: 1.18;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-shadow: 0 5px 5px #0c0cd3;
+  color: rgba(1, 1, 11, 0.7);
+}
+
+.sos__mail {
+  font-size: 34px;
   line-height: 1.18;
   font-weight: 500;
   letter-spacing: 0.02em;
   text-align: center;
   color: rgba(1, 1, 11, 0.7);
 }
+@media screen and (min-width: 768px) {
+  .sos__mail {
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+}
 
-/*
+.sos__tel {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: rgb(1, 1, 11);
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 768px) {
+  .sos__tel {
+    font-size: 20px;
+    line-height: 1.14;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+}
 
+.sos__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
+.sos__item:first-child {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .sos__item:first-child {
+    margin-bottom: 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
 
-.site-nav {
+.sos__mail:hover,
+.sos__mail:focus {
+  color: #ED8DBB;
+}
+
+.sos__tel:hover,
+.sos__tel:focus {
+  color: #ED8DBB;
+}
+
+.sos__item:hover,
+.sos__item:focus {
+  fill: #ED8DBB;
+}
+
+.sos__img {
+  margin-right: 12px;
+}
+
+.social {
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .social {
+    gap: 12px;
+  }
+}
+
+.social__instagram {
+  content: "";
+  width: 42px;
+  height: 42px;
+  border: transparent;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(24, 41, 66, 0.88);
+          box-shadow: 0px 0px 8px 1px rgba(24, 41, 66, 0.88);
+  fill: white;
+  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(20%, rgb(230, 202, 47)), color-stop(50%, rgb(230, 47, 71)), to(rgb(230, 47, 190)));
+  background-image: linear-gradient(to top right, rgb(230, 202, 47) 20%, rgb(230, 47, 71) 50%, rgb(230, 47, 190));
+}
+@media screen and (min-width: 768px) {
+  .social__instagram {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.social__whatsApp {
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(24, 41, 66, 0.88);
+          box-shadow: 0px 0px 8px 1px rgba(24, 41, 66, 0.88);
+  content: "";
+  width: 42px;
+  height: 42px;
+  border: transparent;
+  border-radius: 50%;
+  fill: white;
+  background-color: rgb(41, 212, 56);
+}
+@media screen and (min-width: 768px) {
+  .social__whatsApp {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.social__telegram {
+  content: "";
+  width: 42px;
+  height: 42px;
+  border: transparent;
+  border-radius: 50%;
+  fill: rgb(115, 187, 245);
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(24, 41, 66, 0.88);
+          box-shadow: 0px 0px 8px 1px rgba(24, 41, 66, 0.88);
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .social__telegram {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.social__viber {
+  content: "";
+  width: 42px;
+  height: 42px;
+  border: transparent;
+  border-radius: 50%;
+  fill: rgb(95, 32, 240);
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(24, 41, 66, 0.88);
+          box-shadow: 0px 0px 8px 1px rgba(24, 41, 66, 0.88);
+}
+@media screen and (min-width: 768px) {
+  .social__viber {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/*---------------------------header*/
+.header__tablet {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__tablet {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    gap: 32px;
-    flex-direction: column;
+    padding: 24px 0;
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
 }
 
-.site-nav__link,
-.site-nav__link--current {
-    @include font(40px, 1.18, 500, 0.02em);
-    color: $primery-color;
+.header__tablet {
+  background-color: #fff;
 }
 
-.site-nav__link--current {
-    color: $accend-color;
+.header__tablet .work-time {
+  position: relative;
 }
 
-.auth-nav {
+.header__tablet .work-time__link {
+  position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+  .header-item {
+    -webkit-box-flex: 5;
+        -ms-flex-positive: 5;
+            flex-grow: 5;
+    margin: 6px 0 0 6px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-item {
+    margin: 0 180px;
+  }
+}
+
+.social__item {
+  width: 32px;
+  height: 32px;
+}
+
+/*------------------------tablet-constanta*/
+@media screen and (max-width: 767px) {
+  .section.tablet-constanta {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section.tablet-constanta {
+    background-color: #FBD3E6;
+    width: 100vw;
+    border-bottom: 4px solid #ed8dbb;
+  }
+}
+
+.tablet-constanta__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 80px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.tablet-constanta__link {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: #2f303a;
+}
+
+.tablet-constanta__link:hover,
+.tablet-constanta__link:focus {
+  content: "";
+  width: 100%;
+  height: 12px;
+  padding: 8px;
+  border-radius: 20px;
+  background-color: rgba(65, 65, 77, 0.5);
+  color: white;
+}
+
+.tablet-constanta__list--detailed {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #656577;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+
+/*-------------------------plasma-therapy*/
+.plasma-therapy {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #010111;
+}
+
+.plasma-therapy__span {
+  color: rgb(207, 18, 18);
+}
+
+@media screen and (min-width: 768px) {
+  .plasma-therapy__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 32px;
-    margin-bottom: 64px;
+    gap: 16px;
+  }
 }
 
-.auth-nav__tel {
-    @include font(34px, 1.18, 500, 0.02em);
-
-    color: $accend-color;
+@media screen and (min-width: 768px) {
+  .plasma-therapy__img {
+    width: calc(50% - 8px);
+  }
 }
 
-.auth-nav__mail {
-    @include font(24px, 1.17, 500, 0.02em);
-    color: $text-color;
+@media screen and (min-width: 768px) {
+  .plasma-therapy__about {
+    width: calc(50% - 8px);
+  }
 }
 
-.mobile__sos {
+.plasma-therapy__list .plasma-therapy__item + .plasma-therapy__item {
+  margin-bottom: 12px;
+}
+
+.plasma-therapy__item:first-child {
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: rgb(207, 18, 18);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.plasma-therapy__item:nth-child(2) {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #2f303a;
+  text-indent: 24px;
+}
+
+.plasma-therapy__item:nth-child(n+3)::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: rgb(207, 18, 18);
+  color: rgb(207, 18, 18);
+  border: 2px solid black;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-right: 8px;
+}
+
+/*----------------------carboxy-therapy*/
+.plasma-therapy {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #010111;
+}
+
+.plasma-therapy__span {
+  color: rgb(207, 18, 18);
+}
+
+@media screen and (min-width: 768px) {
+  .plasma-therapy__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-
+    gap: 16px;
+  }
 }
 
-.mobile__sos--blue {
-
-    display: flex;
-    padding: 10px;
+@media screen and (min-width: 768px) {
+  .plasma-therapy__img {
+    width: calc(50% - 8px);
+  }
 }
 
-.mobile__sos--coloring {
-    @include font(18px, 1.22, 500, 0.02em);
-    color: $accend-color;
+@media screen and (min-width: 768px) {
+  .plasma-therapy__about {
+    width: calc(50% - 8px);
+  }
 }
 
-.mobile__sos .mobile__sos--blue::after+.mobile__sos--blue {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 22px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+.plasma-therapy__list .plasma-therapy__item + .plasma-therapy__item {
+  margin-bottom: 12px;
+}
 
-}*/
-/* --------смужка через бордер
-  .mobile__sos .mobile__sos--blue:not(:last-child) {
+.plasma-therapy__item:first-child {
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: rgb(207, 18, 18);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
 
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
+.plasma-therapy__item:nth-child(2) {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #2f303a;
+  text-indent: 24px;
+}
 
-  }*//*# sourceMappingURL=main.css.map */
+.plasma-therapy__item:nth-child(n+3)::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: rgb(207, 18, 18);
+  color: rgb(207, 18, 18);
+  border: 2px solid black;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-right: 8px;
+}/*# sourceMappingURL=main.css.map */

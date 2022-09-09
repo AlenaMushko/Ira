@@ -16,4 +16,9 @@ a {
   text-decoration: none;
 }
 
+h2{
+  @include font (18px, 1.2, 700, 0.03em);
+    color: $primery-color;
+}
+
 
