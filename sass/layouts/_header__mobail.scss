@@ -46,6 +46,8 @@
 .address__link {
   content: '';
   fill: $background-color-pink-darc;
+
+  transition: color $transform;
 }
 
 .address__link:hover,
@@ -217,7 +219,7 @@
 @include font(34px, 1.18, 500, 0.02em);
     text-align: center;
     color: rgba(01, 01, 11, 0.7);
-
+transition: color $transform;
     @media screen and(min-width:768px) {
         @include font (14px, 1.14, 500, 0.02em);
         
@@ -229,7 +231,7 @@
         text-align: center;
         color: rgba(01, 01, 11, 1);
         margin-bottom: 8px;
-
+transition: color $transform;
         @media screen and(min-width:768px) {
             @include font (20px, 1.14, 500, 0.02em);
           }

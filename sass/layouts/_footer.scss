@@ -1,9 +1,10 @@
 /*-----------------------footer*/
-.footer {
+footer {
   padding-top: 60px;
   padding-bottom: 60px;
-
-  background-color: $background-darc-color;
+color: $title-color;
+  background-color: rgba(65, 65, 77, 0.8);
+  width: 100vw;
 }
 
 .footer .container {
@@ -39,16 +40,12 @@ flex-grow: 1;
 }
 
 @media screen and (max-width:1199px){
-  .footer-logo{
- justify-content: center;
- display: flex;
-}
-}
+  
+  .header-item{
+display: flex;
+  justify-content: center;
 
-
-.footer__logo {
-  color: $title-color;
- 
+}
 }
 
 .contacts {
@@ -60,69 +57,28 @@ flex-grow: 1;
   }
 }
 
+
+
 .footer__address {
   margin-top: 20px;
-
- 
-  
+  display: flex;
+    justify-content: center;
 }
 
-.address {
-   font-style: normal;
- 
+.footer__address .address__link{
+  @include font (16px, 1.2, 400, 0.02em);
+  color: $background-color-pink-lite;
 }
 
-
-.address__item{
- display: flex;
+.footer__address .address__item{
+border: 1px solid #ED8DBB;
+color: $title-color;
 
 @media screen and (max-width:1199px){
   justify-content: center;
 }
 
 }
-
-.address .address__item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.address__map {
-  color: $title-color;
-  @include font(14px, 1.71, $weight: 400, $spacing: 0.03em);
-  transition: color $transform;
-
-  &:hover,
-  &:focus {
-    color: $accend-color;
-  }
-}
-
-.address__cotact {
-  @include font(14px, 1.71, $weight: 400, $spacing: 0.03em);
-  color: rgba(255, 255, 255, 0.6);
-
-  transition: color $transform;
-
-  &:hover,
-  &:focus {
-    color: $accend-color;
-  }
-}
-
-.footer__title {
-  color: $title-color;
-  @include font(14px, 1.14, 700, $spacing: 0.03em);
-  text-transform: uppercase;
-
-display: flex;
-  margin-bottom: 20px;
-
-  @media screen and (max-width:1199px) {
-      justify-content: center;
-    }
-}
-
-
 
 
 .footer__footer-soc {
@@ -137,10 +93,45 @@ display: flex;
            margin-left: 70px; 
          }
 
+ }
+
+.footer-soc .sos__mail {
+   @include font (14px, 1.14, 500, 0.02em);
+  text-align: center;
+  color: $title-color;
+  transition: color $transform;
  
+
 }
 
-.social_link--dark-bg {
-  @extend .social__link;
-  background-color: rgba(255, 255, 255, 0.1);
+.footer-soc .sos__img{
+  fill: $title-color;
 }
+
+.footer-soc .sos__tel {
+justify-content: center;
+  text-align: center;
+  color: $title-color;
+  margin-bottom: 8px;
+  transition: color $transform;
+
+ 
+    @include font (20px, 1.14, 500, 0.02em);
+  
+}
+
+.footer-soc .sos__item {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-soc .sos__item:first-child {
+  
+    margin-bottom: 10px;
+    flex-direction: row-reverse;
+  
+}
+

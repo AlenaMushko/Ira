@@ -17,6 +17,8 @@
 }
 
 .plasma-therapy__img{
+  margin-left: auto;
+    margin-right: auto;
   @media screen and (min-width:768px){
     width: calc(50% - 8px) ;
   }

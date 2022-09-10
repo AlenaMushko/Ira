@@ -23,6 +23,9 @@
 .tablet-constanta__link{
     @include font (18px, 1.2, 500, 0.03em);
     color:$background-darc-color;
+    transition: color $transform, 
+              background-color $transform, 
+             
 }
 
 .tablet-constanta__link:hover,
